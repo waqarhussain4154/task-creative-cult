@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "838507035619",
+    "project_id": "creative-cult",
+    "storage_bucket": "creative-cult.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:838507035619:android:5a57f2bb543d8aa2b5fed6",
+        "android_client_info": {
+          "package_name": "com.cultcreativetask"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "838507035619-rdm98a1kd49nerg383hfoatotdnrj3od.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cultcreativetask",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "838507035619-v512014e7detfbsprdgitmf408bltoi1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cultcreativetask",
+            "certificate_hash": "3fe10b585f2244048bbb417d24dfebb3e70422c5"
+          }
+        },
+        {
+          "client_id": "838507035619-hfs1ihp51ftdo78pmukfkit8lji1uf84.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAaylvSraK_yn2xjrsCWjVQ6llfMECGO9o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "838507035619-hfs1ihp51ftdo78pmukfkit8lji1uf84.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
