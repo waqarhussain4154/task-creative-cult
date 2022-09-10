@@ -1,17 +1,10 @@
 import auth from '@react-native-firebase/auth';
 import {useNavigation} from '@react-navigation/native';
 import React, {useState, useRef, useEffect} from 'react';
-import {
-  View,
-  Text,
-  SafeAreaView,
-  Button,
-  ActivityIndicator,
-  FlatList,
-} from 'react-native';
+import {View, Text, Button, ActivityIndicator, FlatList} from 'react-native';
 import firestore from '@react-native-firebase/firestore';
 import styles from './style';
-import Card from '../../components/test/card';
+import Card from '../../components/card/card';
 const Main = () => {
   const navigation = useNavigation();
   const [loading, setLoading] = useState(true); // Set loading to true on component mount
