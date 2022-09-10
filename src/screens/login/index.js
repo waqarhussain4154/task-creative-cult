@@ -31,8 +31,6 @@ export default function LoginScreen({navigation}) {
     return subscriber; // unsubscribe on unmount
   }, []);
   const onLoginPress = () => {
-    console.log('email', email);
-    console.log('password', password);
     auth()
       .signInWithEmailAndPassword(email, password)
       .then(() => {
