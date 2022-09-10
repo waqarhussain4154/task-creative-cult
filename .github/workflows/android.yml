@@ -17,11 +17,11 @@ jobs:
 
     - name: Check Directory
       run: - pwd
-       - ls -la
-       - cd android && chmod +x ./gradlew
-       
+           - ls -la
+           - cd android && chmod +x ./gradlew
+
     - name: Build Command
-      run: cd android && chmod +x ./gradlew
+             run: cd android && chmod +x ./gradlew
 
     - name: build debug 
       run: ./gradlew assembleDebug
