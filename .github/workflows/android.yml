@@ -1,26 +1,24 @@
-name: Build & upload to Firebase App Distribution
-
-on: [push]
-
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  build-production:
+    runs-on: macos-latest
 
     steps:
-      - name: Make gradlew executable
-        run: chmod +x ./android/gradlew
-      - uses: actions/checkout@v1
+      - name: Checkout Repository in Github VM
+        uses: actions/checkout@v2
+      - name: Run Node in Github VM
+        uses: actions/setup-node@master
+      - name: Install Dependencies
+        run: |
+          npm install
 
-      - name: set up JDK 1.8
-        uses: actions/setup-java@v1
+      - name: Install Ruby
+        uses: ruby/setup-ruby@v1
         with:
-          java-version: 1.8
-      - name: build debug
-        run: ./gradlew assembleDebug
-      - name: upload artifact to Firebase App Distribution
-        uses: wzieba/Firebase-Distribution-Github-Action@v1.2.1
-        with:
-          appId: ${{secrets.FIREBASE_APP_ID}}
-          token: ${{secrets.FIREBASE_TOKEN}}
-          groups: Debug
-          file: app/build/outputs/apk/debug/app-debug.apk
+          ruby-version: 2.6
+      - name: Install Fastlane
+        run: |
+          bundle install
+          bundle update fastlane
+      - name: Build and Publish Mobile App
+        run: |
+          bundle exec fastlane android distribute
