@@ -8,7 +8,7 @@ jobs:
 
     steps:
       - name: Make gradlew executable
-        run: chmod +x ./gradlew
+        run: chmod +x ./android/gradlew
       - uses: actions/checkout@v1
 
       - name: set up JDK 1.8
