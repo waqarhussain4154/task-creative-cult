@@ -1,3 +1,4 @@
+name: Deploy To Firebase App Distribution And Bump Tag Version
 on:
   push: branches:[master]
 jobs:
